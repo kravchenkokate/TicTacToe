@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * Игрок-компъютер
  */
@@ -12,21 +14,20 @@ public class Computer extends Player {
     public void makeTurn() {
 
         System.out.println(getName() + ":");
-        addMark();
-        getGrid().printGrid();
-        checkVictory();
+        addMark(new Random());
     }
 
-    private void addMark() {
+    private void addMark(Random random) {
 
-        char[][] a = getGrid().getCells();
-        for(int i=0; i<3; i++) {
-            for(int j=0; j<3; j++) {
-                if(a[i][j] != 'х' && a[i][j] != 'о') {
-                    a[i][j] = getMark();
-                    return;
-                }
-            }
+        int max = 9, min = 1;
+        int pos = random.nextInt(max - min + 1) + min;
+
+        if(getGrid().addMark(pos, getMark())) {
+            getGrid().printGrid();
+            checkVictory();
+        }
+        else {
+            addMark(random);
         }
     }
 }
