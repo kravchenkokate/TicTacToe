@@ -8,7 +8,7 @@ public class TicTacToe {
 
         input = new Scanner(System.in);
 
-        System.out.println("Добро пожаловать в консольную игру Крестики-Нолики!");
+        System.out.println("Добро пожаловать в игру Крестики-Нолики!");
         System.out.println("Как вас зовут?");
         String name = input.next();
 
@@ -64,7 +64,7 @@ public class TicTacToe {
     private static void checkMark(char mark) {
 
         if(mark != 'х' && mark != 'о') {
-            System.out.println("Пожалуйста, введите символ 'х' или 'о'.");
+            System.out.println("Пожалуйста, введите символ 'х' или 'о' (русская раскладка клавиатуры).");
             mark = input.next().charAt(0);
             checkMark(mark);
         }

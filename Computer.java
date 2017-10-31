@@ -1,7 +1,7 @@
 import java.util.Random;
 
 /**
- * Игрок-компъютер
+ * Игрок-компьютер
  */
 public class Computer extends Player {
 
