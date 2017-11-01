@@ -88,5 +88,5 @@ public abstract class Player {
     /**
      * Сделать ход. Проставить свой знак ('x' или 'o') в ячейку на поле
      */
-    public abstract void makeTurn();
+    public abstract void makeMove();
 }

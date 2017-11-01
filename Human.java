@@ -15,7 +15,7 @@ public class Human extends Player {
 
 
     @Override
-    public void makeTurn() {
+    public void makeMove() {
 
         System.out.println("Ваш ход, " + getName() + ":");
         int pos = input.nextInt();

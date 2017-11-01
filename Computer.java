@@ -11,7 +11,7 @@ public class Computer extends Player {
 
 
     @Override
-    public void makeTurn() {
+    public void makeMove() {
 
         System.out.println(getName() + ":");
         addMark(new Random());

@@ -37,9 +37,9 @@ public class TicTacToe {
         System.out.println("Начнём.");
 
         do {
-            player1.makeTurn();
+            player1.makeMove();
             if(!player1.isWinner()) {
-                player2.makeTurn();
+                player2.makeMove();
             }
         } while(!player1.isWinner() && !player2.isWinner());
 
