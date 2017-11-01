@@ -5,8 +5,12 @@ import java.util.Random;
  */
 public class Computer extends Player {
 
+    private Random random;
+
     public Computer(String name, char mark) {
+
         super(name, mark);
+        random = new Random();
     }
 
 
@@ -14,10 +18,10 @@ public class Computer extends Player {
     public void makeMove() {
 
         System.out.println(getName() + ":");
-        addMark(new Random());
+        addMark();
     }
 
-    private void addMark(Random random) {
+    private void addMark() {
 
         int max = 9, min = 1;
         int pos = random.nextInt(max - min + 1) + min;
@@ -27,7 +31,7 @@ public class Computer extends Player {
             checkVictory();
         }
         else {
-            addMark(random);
+            addMark();
         }
     }
 }
